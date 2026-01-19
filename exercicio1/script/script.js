@@ -5,7 +5,7 @@ const links = document.querySelectorAll(".menu a");
 if (btn && menu) {
     btn.addEventListener("click", () => {
         const isOpen = menu.classList.toggle("is-open");
-        btn.setAttribute("aria-expanded", isOpen ? "true " : "false");
+        btn.setAttribute("aria-expanded", isOpen ? "true" : "false");
     });
 
     links.forEach((link) => {
@@ -18,15 +18,30 @@ if (btn && menu) {
     });
 }
 
+const topo = document.querySelector(".topo");
+
 links.forEach((link) => {
     link.addEventListener("click", (event) => {
         const targetId = link.getAttribute("href");
+
         if (targetId && targetId.startsWith("#")) {
             const section = document.querySelector(targetId);
-            if (section) {
-                event.preventDefault();
-                section.scrollIntoView({ behavior: "smooth", block: "start" }); 
-            }
+            if (!section) return;
+
+            event.preventDefault();
+
+            const alturaTopo = topo ? topo.offsetHeight : 0;
+
+            const y =
+                section.getBoundingClientRect().top +
+                window.scrollY -
+                alturaTopo -
+                5; // pequena folga
+
+            window.scrollTo({
+                top: y,
+                behavior: "smooth"
+            });
         }
     });
 });
