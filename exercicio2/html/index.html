@@ -7,104 +7,133 @@
 
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="/exercicio2/css/style.css">
+  
 </head>
-<body>
+<body class="bg-light">
 
-<header class="site-header">
-  <div class="container">
-    <div class="topbar">
-      <a class="brand" href="index.html">
-        <img class="brand__logo" src="/exercicio2/img/logoFada.jpg" alt="Logo Reino das Fadas">
-        <span class="brand__name">Reino das Fadas</span>
-      </a>
+<nav class="navbar navbar-expand-lg bg-white border-bottom sticky-top">
+  <div class="container py-2">
 
-      <nav class="nav">
-        <a class="nav__link is-active" href="index.html">Home</a>
-        <a class="nav__link" href="personagens.html">Personagens</a>
-        <a class="nav__link" href="contato.html">Mensagem</a>
-      </nav>
+    <a class="navbar-brand d-flex align-items-center gap-2 fw-bold" href="index.html">
+      <img src="/exercicio2/img/logoFada.jpg" alt="Logo" width="40" height="40"
+           class="rounded-circle border object-fit-cover">
+      <span>Reino das Fadas</span>
+    </a>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu"
+      aria-controls="menu" aria-expanded="false" aria-label="Abrir menu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="menu">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item"><a class="nav-link active fw-semibold" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link fw-semibold" href="personagens.html">Personagens</a></li>
+        <li class="nav-item"><a class="nav-link fw-semibold" href="contato.html">Mensagem</a></li>
+      </ul>
     </div>
-  </div>
-</header>
 
-<main class="container">
-  <section class="hero">
-    <div class="row align-items-center g-4">
-      <div class="col-lg-6">
-        <p class="hero__pill">✨ bem-vinda ao reino ✨</p>
-        <h1 class="hero__title">Reino das Fadas</h1>
-        <p class="hero__text">
+  </div>
+</nav>
+
+<main class="container py-4">
+
+  <section class="card border-0 shadow-sm rounded-4 overflow-hidden">
+    <div class="row g-0 align-items-center">
+
+      <div class="col-lg-6 p-4 p-md-5">
+        <span class="badge rounded-pill text-bg-light border mb-3">✨ bem-vinda ao reino ✨</span>
+
+        <h1 class="display-5 fw-bold mb-2">Reino das Fadas</h1>
+        <p class="lead text-secondary mb-4">
           Um lugar mágico com castelos, estrelinhas e personagens encantadores.
         </p>
 
-        <div class="hero__actions">
-          <a class="btn btn-primary" href="personagens.html">Conhecer personagens</a>
-          <a class="btn btn-outline-secondary" href="contato.html">Enviar mensagem</a>
+        <div class="d-flex flex-wrap gap-2 mb-4">
+          <a class="btn btn-primary btn-lg rounded-pill" href="personagens.html">Conhecer personagens</a>
+          <a class="btn btn-outline-secondary btn-lg rounded-pill" href="contato.html">Enviar mensagem</a>
         </div>
 
-        <div class="hero__mini">
-          <div class="mini">
-            <img src="/exercicio2/img/varrinhaMagica.png" alt="Varinha" class="mini__icon">
-            <span>Magia</span>
+        <div class="row g-3">
+          <div class="col-12 col-sm-4">
+            <div class="d-flex align-items-center gap-2">
+              <img src="/exercicio2/img/varrinhaMagica.png" alt="Varinha" width="28" height="28">
+              <span class="fw-semibold">Magia</span>
+            </div>
           </div>
-          <div class="mini">
-            <img src="/exercicio2/img/estrela.png" alt="Estrela" class="mini__icon">
-            <span>Estrelinhas</span>
+
+          <div class="col-12 col-sm-4">
+            <div class="d-flex align-items-center gap-2">
+              <img src="/exercicio2/img/estrela.png" alt="Estrela" width="28" height="28">
+              <span class="fw-semibold">Estrelinhas</span>
+            </div>
           </div>
-          <div class="mini">
-            <img src="/exercicio2/img/coracao.png" alt="Coração" class="mini__icon">
-            <span>Amizade</span>
+
+          <div class="col-12 col-sm-4">
+            <div class="d-flex align-items-center gap-2">
+              <img src="/exercicio2/img/coracao.png" alt="Coração" width="28" height="28">
+              <span class="fw-semibold">Amizade</span>
+            </div>
           </div>
         </div>
       </div>
 
       <div class="col-lg-6">
-        <div class="hero__image">
-          <img src="/exercicio2/img/casteloPrincipal.jpg" alt="Banner do Reino das Fadas" class="min_castelo">
+        <img src="/exercicio2/img/casteloPrincipal.jpg"
+             alt="Castelo principal"
+             class="img-fluid w-100 object-fit-cover"
+             style="min-height: 320px;">
+      </div>
+
+    </div>
+  </section>
+
+  <section class="text-center mt-5 mb-3">
+    <h2 class="fw-bold mb-1">O que tem no Reino</h2>
+    <p class="text-secondary mb-0">Três cantinhos fofos para explorar ✨</p>
+  </section>
+
+  <section class="row g-3 pb-4">
+    <div class="col-md-4">
+      <article class="card border-0 shadow-sm rounded-4 h-100">
+        <div class="card-body p-4 text-center">
+          <img src="/exercicio2/img/castelo.jpg" alt="Castelo" width="64" height="64" class="mb-3">
+          <h3 class="h5 fw-bold">Castelo Encantado</h3>
+          <p class="text-secondary mb-0">Um castelo cheio de brilho e segredos mágicos.</p>
         </div>
-      </div>
+      </article>
+    </div>
+
+    <div class="col-md-4">
+      <article class="card border-0 shadow-sm rounded-4 h-100">
+        <div class="card-body p-4 text-center">
+          <img src="/exercicio2/img/estrela.png" alt="Estrela" width="64" height="64" class="mb-3">
+          <h3 class="h5 fw-bold">Missões do Dia</h3>
+          <p class="text-secondary mb-0">Pequenas missões fofinhas para imaginar e brincar.</p>
+        </div>
+      </article>
+    </div>
+
+    <div class="col-md-4">
+      <article class="card border-0 shadow-sm rounded-4 h-100">
+        <div class="card-body p-4 text-center">
+          <img src="/exercicio2/img/coracao.png" alt="Coração" width="64" height="64" class="mb-3">
+          <h3 class="h5 fw-bold">Recadinhos</h3>
+          <p class="text-secondary mb-0">Envie uma mensagem mágica e espalhe carinho.</p>
+        </div>
+      </article>
     </div>
   </section>
 
-  <section class="section">
-    <div class="section__head">
-      <h2 class="section__title">O que tem no Reino</h2>
-      <p class="section__sub">Três cantinhos fofos para explorar ✨</p>
-    </div>
-
-    <div class="row g-3">
-      <div class="col-md-4">
-        <article class="card-soft">
-          <img src="/exercicio2/img/castelo.jpg" alt="Castelo" class="card-soft__icon" width="60" height="60">
-          <h3 class="card-soft__title">Castelo Encantado</h3>
-          <p class="card-soft__text">Um castelo cheio de brilho e segredos mágicos.</p>
-        </article>
-      </div>
-
-      <div class="col-md-4">
-        <article class="card-soft">
-          <img src="/exercicio2/img/estrela.png" alt="Estrela" class="card-soft__icon" width="60" height="60">
-          <h3 class="card-soft__title">Missões do Dia</h3>
-          <p class="card-soft__text">Pequenas missões fofinhas para imaginar e brincar.</p>
-        </article>
-      </div>
-
-      <div class="col-md-4">
-        <article class="card-soft">
-          <img src="/exercicio2/img/coracao.png" alt="Coração" class="card-soft__icon" width="60" height="60">
-          <h3 class="card-soft__title">Recadinhos</h3>
-          <p class="card-soft__text">Envie uma mensagem mágica e espalhe carinho.</p>
-        </article>
-      </div>
-    </div>
-  </section>
 </main>
 
-<footer class="site-footer">
-  <div class="container footer-inner">
-    <span>© 2026 Reino das Fadas</span>
-    <span>Trabalho do curso ✨</span>
+<footer class="bg-white border-top">
+  <div class="container py-4 d-flex justify-content-between flex-wrap gap-2">
+    <span class="text-secondary">© 2026 Reino das Fadas</span>
+    <span class="text-secondary">Trabalho do curso ✨</span>
   </div>
 </footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
