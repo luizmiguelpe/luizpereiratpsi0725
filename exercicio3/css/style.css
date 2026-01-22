@@ -16,12 +16,24 @@ body {
 }
 
 .brand{
-    color: #fff;
-    font-weight: 800;
-    font-size: 48px;
+    line-height: 1.1;
     margin: 0;
 }
 
+.brand-main{
+    color: #0e0e0e;
+    font-size: 2.2rem;
+    font-weight: 800;
+    display: block;
+}
+
+.brand-sub{
+    display: block;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #555;
+    letter-spacing: 0.05em;
+}
 .menubar{
     background: var(--orange);
     height: 86px;
@@ -70,7 +82,7 @@ main p{
     border: none;
     border-radius: 12px;
     padding: 14px 18px;
-    color: var(--btn-blue);
+    color: #fff;
     font-size: 18px;
     font-weight: 500;
     box-shadow: none;
@@ -130,10 +142,20 @@ main p{
     position: absolute;
     bottom: 90px;
     left: 20;
-
     padding: 10px 14px;
     font-size: 18px;
     border-radius: 6px;
+}
+
+
+.nav-actions a{
+    color:#000;
+    font-weight: 500;
+}
+
+.nav-actions a:hover{
+    text-decoration: underline;
+    color: #555;
 }
 
 .footer-image h2,
