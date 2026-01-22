@@ -1,0 +1,168 @@
+:root{
+    --top-gray: #a9a9a9;
+    --orange: #efad3c;
+    --bg: #f7fffb;
+    --btn-blue: #1a32ff;
+}
+
+body {
+    background: var(--bg);
+    margin: 0;
+}
+
+.topbar{
+    background: var(--top-gray);
+    height: 96px;
+}
+
+.brand{
+    color: #fff;
+    font-weight: 800;
+    font-size: 48px;
+    margin: 0;
+}
+
+.menubar{
+    background: var(--orange);
+    height: 86px;
+}
+
+.menubar .nav-link{
+    color: #fff;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.menubar .nav-link:hover{
+    text-decoration: underline;
+}
+
+.menubar .nav{
+    gap: 110px;
+}
+
+main {
+    padding-top: 55px;
+    padding-bottom: 80px;
+}
+
+.cars{
+    width: 100%;
+    max-width: 520px;
+    height: auto;
+    display: block;
+    margin: 0 auto 32px;
+}
+
+main h2{
+    font-size: 44px;
+    font-weight: 800;
+    margin-bottom: 10px;
+}
+
+main p{
+    font-size: 18px;
+    margin-bottom: 22px;
+}
+
+.btn-orange{
+    background: var(--orange);
+    border: none;
+    border-radius: 12px;
+    padding: 14px 18px;
+    color: var(--btn-blue);
+    font-size: 18px;
+    font-weight: 500;
+    box-shadow: none;
+}
+
+.btn-orange:focus,
+.btn-orange:active{
+    box-shadow: none;
+}
+
+.status-badge{
+    position: fixed;
+    left: 10px;
+    bottom: 100px;
+    z-index: 9999;
+    padding: 10px 14px;
+    font-size: 18px;
+    border-radius: 6px;
+}
+
+.site-footer{
+  position: relative;
+}
+
+.footer-image{
+  width: 100%;
+  background: #f7fffb; 
+}
+
+.footer-image img{
+  width: 100%;
+  max-width: 1200px;   
+  display: block;
+  margin: 0 auto;
+}
+
+.footer-bar{
+  background: #a9a9a9;
+  width: 100%;
+  height: 90px;
+}
+
+.footer-bar p{
+  font-size: 18px;
+}
+
+.footer-badge{
+  position: absolute;
+  left: 0;
+  bottom: 90px;       
+  padding: 10px 14px;
+  font-size: 18px;
+  border-radius: 6px;
+}
+
+.success-float{
+    position: absolute;
+    bottom: 90px;
+    left: 20;
+
+    padding: 10px 14px;
+    font-size: 18px;
+    border-radius: 6px;
+}
+
+.footer-image h2,
+.footer-image p,
+.footer-image button {
+    margin-bottom: 20px;
+    margin-left: 100px;   /* controla o deslocamento para a direita */
+}
+
+@media(max-width: 992px){
+    .topbar{
+        height: auto;
+        padding: 18px 0;
+    }
+    .brand{
+        font-size: 34px;
+    }
+
+    .menubar{
+        height: auto;
+        padding: 18px 0;
+    }
+
+    .menubar .nav{
+        gap: 28px;
+        flex-wrap: wrap;
+    }
+
+    main{
+        padding-top: 35px;
+    }
+}
