@@ -34,6 +34,7 @@ body {
     color: #555;
     letter-spacing: 0.05em;
 }
+
 .menubar{
     background: var(--orange);
     height: 86px;
@@ -49,32 +50,26 @@ body {
     text-decoration: underline;
 }
 
-.menubar .nav{
-    gap: 110px;
-}
-
-main {
-    padding-top: 55px;
-    padding-bottom: 80px;
-}
-
 .cars{
-    width: 100%;
-    max-width: 520px;
-    height: auto;
     display: block;
-    margin: 0 auto 32px;
+    width: 100%;
+    height: auto;
+    margin: 0 auto 24px;
 }
 
-main h2{
-    font-size: 44px;
-    font-weight: 800;
-    margin-bottom: 10px;
+.col-lg-4 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-main p{
-    font-size: 18px;
-    margin-bottom: 22px;
+.col-lg-4 h2{
+    min-height: 96px;
+    text-align: center;
+}
+
+.col-lg-4 .btn{
+    margin-top: auto;
 }
 
 .btn-orange{
@@ -88,35 +83,14 @@ main p{
     box-shadow: none;
 }
 
-.btn-orange:focus,
-.btn-orange:active{
-    box-shadow: none;
+.nav-actions a{
+    color:#000;
+    font-weight: 500;
 }
 
-.status-badge{
-    position: fixed;
-    left: 10px;
-    bottom: 100px;
-    z-index: 9999;
-    padding: 10px 14px;
-    font-size: 18px;
-    border-radius: 6px;
-}
-
-.site-footer{
-  position: relative;
-}
-
-.footer-image{
-  width: 100%;
-  background: #f7fffb; 
-}
-
-.footer-image img{
-  width: 100%;
-  max-width: 1200px;   
-  display: block;
-  margin: 0 auto;
+.nav-actions a:hover{
+    text-decoration: underline;
+    color: #555;
 }
 
 .footer-bar{
@@ -129,15 +103,6 @@ main p{
   font-size: 18px;
 }
 
-.footer-badge{
-  position: absolute;
-  left: 0;
-  bottom: 90px;       
-  padding: 10px 14px;
-  font-size: 18px;
-  border-radius: 6px;
-}
-
 .success-float{
     position: absolute;
     bottom: 90px;
@@ -145,24 +110,6 @@ main p{
     padding: 10px 14px;
     font-size: 18px;
     border-radius: 6px;
-}
-
-
-.nav-actions a{
-    color:#000;
-    font-weight: 500;
-}
-
-.nav-actions a:hover{
-    text-decoration: underline;
-    color: #555;
-}
-
-.footer-image h2,
-.footer-image p,
-.footer-image button {
-    margin-bottom: 20px;
-    margin-left: 100px;   /* controla o deslocamento para a direita */
 }
 
 @media(max-width: 992px){
