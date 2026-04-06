@@ -1,0 +1,354 @@
+{
+  "port": 3000,
+  "protocol": "http",
+  "stubs": [
+    {
+      "predicates": [
+        {
+          "equals": {
+            "method": "GET",
+            "path": "/api/cars",
+            "query": { "brand": "Toyota" }
+          }
+        }
+      ],
+      "responses": [
+        {
+          "is": {
+            "statusCode": 200,
+            "headers": { "Content-Type": "application/json" },
+            "body": {
+              "brand": "Toyota",
+              "results": [
+                { "id": 1, "modelo": "Corolla", "preco": 25000 },
+                { "id": 2, "modelo": "Yaris", "preco": 18000 }
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "predicates": [
+        {
+          "equals": {
+            "method": "GET",
+            "path": "/api/cars"
+          }
+        }
+      ],
+      "responses": [
+        {
+          "is": {
+            "statusCode": 200,
+            "headers": { "Content-Type": "application/json" },
+            "body": { "results": [] }
+          }
+        }
+      ]
+    },
+    {
+      "predicates": [
+        {
+          "equals": {
+            "method": "POST",
+            "path": "/api/login",
+            "headers": { "Content-Type": "application/json" }
+          }
+        },
+        {
+          "deepEquals": {
+            "body": { "username": "admin", "password": "secret" }
+          }
+        }
+      ],
+      "responses": [
+        {
+          "is": {
+            "statusCode": 200,
+            "headers": { "Content-Type": "application/json" },
+            "body": { "status": "ok", "token": "validtoken" }
+          }
+        }
+      ]
+    },
+    {
+      "predicates": [
+        {
+          "equals": {
+            "method": "POST",
+            "path": "/api/login",
+            "headers": { "Content-Type": "application/json" }
+          }
+        }
+      ],
+      "responses": [
+        {
+          "is": {
+            "statusCode": 401,
+            "headers": { "Content-Type": "application/json" },
+            "body": { "error": "invalid_credentials" }
+          }
+        }
+      ]
+    },
+    {
+      "predicates": [
+        {
+          "equals": {
+            "method": "POST",
+            "path": "/api/users",
+            "headers": { "Content-Type": "application/json" }
+          }
+        },
+        {
+          "contains": {
+            "body": "exists@example.com"
+          }
+        }
+      ],
+      "responses": [
+        {
+          "is": {
+            "statusCode": 409,
+            "headers": { "Content-Type": "application/json" },
+            "body": {
+              "error": "email_exists",
+              "message": "O email já se encontra registado no sistema."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "predicates": [
+        {
+          "equals": {
+            "method": "POST",
+            "path": "/api/users",
+            "headers": { "Content-Type": "application/json" }
+          }
+        }
+      ],
+      "responses": [
+        {
+          "is": {
+            "statusCode": 201,
+            "headers": {
+              "Content-Type": "application/json",
+              "Location": "/api/users/123"
+            },
+            "body": {
+              "id": 123,
+              "status": "created",
+              "message": "Utilizador criado com sucesso."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "predicates": [
+        {
+          "equals": {
+            "method": "POST",
+            "path": "/api/temperature",
+            "headers": { "Content-Type": "application/json" }
+          }
+        },
+        {
+          "not": {
+            "contains": {
+              "body": "value"
+            }
+          }
+        }
+      ],
+      "responses": [
+        {
+          "is": {
+            "statusCode": 400,
+            "headers": { "Content-Type": "application/json" },
+            "body": {
+              "error": "missing_field",
+              "message": "O campo 'value' é obrigatório."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "predicates": [
+        {
+          "equals": {
+            "method": "POST",
+            "path": "/api/temperature",
+            "headers": { "Content-Type": "application/json" }
+          }
+        },
+        {
+          "contains": {
+            "body": "value"
+          }
+        }
+      ],
+      "responses": [
+        {
+          "is": {
+            "statusCode": 201,
+            "headers": { "Content-Type": "application/json" },
+            "body": {
+              "status": "created",
+              "message": "Medição registada com sucesso."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "predicates": [
+        {
+          "equals": {
+            "method": "POST",
+            "path": "/api/tasks",
+            "headers": { "Content-Type": "application/json" }
+          }
+        },
+        {
+          "contains": {
+            "body": "\"title\":\"duplicate\""
+          }
+        }
+      ],
+      "responses": [
+        {
+          "is": {
+            "statusCode": 409,
+            "headers": { "Content-Type": "application/json" },
+            "body": {
+              "error": "duplicate_task",
+              "message": "Já existe uma tarefa com este título."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "predicates": [
+        {
+          "equals": {
+            "method": "POST",
+            "path": "/api/tasks",
+            "headers": { "Content-Type": "application/json" }
+          }
+        }
+      ],
+      "responses": [
+        {
+          "is": {
+            "statusCode": 201,
+            "headers": {
+              "Content-Type": "application/json",
+              "Location": "/api/tasks/456"
+            },
+            "body": {
+              "id": 456,
+              "status": "created"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "predicates": [
+        {
+          "equals": {
+            "method": "POST",
+            "path": "/api/auth",
+            "headers": { "Content-Type": "application/json" }
+          }
+        },
+        {
+          "deepEquals": {
+            "body": { "username": "user1", "password": "pass1" }
+          }
+        }
+      ],
+      "responses": [
+        {
+          "is": {
+            "statusCode": 200,
+            "headers": { "Content-Type": "application/json" },
+            "body": {
+              "token": "validtoken",
+              "expires_in": 3600
+            }
+          }
+        }
+      ]
+    },
+    {
+      "predicates": [
+        {
+          "equals": {
+            "method": "POST",
+            "path": "/api/auth",
+            "headers": { "Content-Type": "application/json" }
+          }
+        }
+      ],
+      "responses": [
+        {
+          "is": {
+            "statusCode": 401,
+            "headers": { "Content-Type": "application/json" },
+            "body": { "error": "invalid_credentials" }
+          }
+        }
+      ]
+    },
+    {
+      "predicates": [
+        {
+          "equals": {
+            "method": "GET",
+            "path": "/api/profile",
+            "headers": { "Authorization": "Bearer validtoken" }
+          }
+        }
+      ],
+      "responses": [
+        {
+          "is": {
+            "statusCode": 200,
+            "headers": { "Content-Type": "application/json" },
+            "body": {
+              "username": "user1",
+              "email": "user1@example.com",
+              "role": "admin"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "predicates": [
+        {
+          "equals": {
+            "method": "GET",
+            "path": "/api/profile"
+          }
+        }
+      ],
+      "responses": [
+        {
+          "is": {
+            "statusCode": 403,
+            "headers": { "Content-Type": "application/json" },
+            "body": { "error": "forbidden" }
+          }
+        }
+      ]
+    }
+  ]
+}

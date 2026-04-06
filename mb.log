@@ -1,0 +1,5 @@
+{"level":"info","message":"[mb:2526] mountebank v2.9.1 now taking orders - point your browser to http://localhost:2526/ for help","timestamp":"2026-03-18T23:11:09.838Z"}
+{"level":"info","message":"[mb:2526] PUT /imposters","timestamp":"2026-03-18T23:11:09.905Z"}
+{"level":"info","message":"[http:3001] Open for business...","timestamp":"2026-03-18T23:11:09.911Z"}
+{"level":"info","message":"[http:3001] ::1:54130 => GET /api/marcas","timestamp":"2026-03-18T23:11:41.542Z"}
+{"level":"info","message":"[mb:2526] Adios - see you soon?","timestamp":"2026-03-18T23:13:28.256Z"}

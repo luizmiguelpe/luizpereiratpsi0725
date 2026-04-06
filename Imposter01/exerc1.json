@@ -1,0 +1,29 @@
+{
+  "port": 3000,
+  "protocol": "http",
+  "stubs": [
+    {
+      "predicates": [
+        {
+          "equals": {
+            "method": "GET",
+            "path": "/api/marcas"
+          }
+        }
+      ],
+      "responses": [
+        {
+          "is": {
+            "statusCode": 200,
+            "headers": {
+              "Content-Type": "application/json"
+            },
+            "body": {
+              "marcas": ["Toyota", "Audi", "Ford", "Volvo", "Honda"]
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

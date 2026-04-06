@@ -1,0 +1,122 @@
+{"level":"info","message":"[mb:2525] mountebank v2.9.1 now taking orders - point your browser to http://localhost:2525/ for help","timestamp":"2026-04-06T16:33:20.057Z"}
+{"level":"info","message":"[mb:2525] GET /images/book.jpg","timestamp":"2026-04-06T16:33:32.646Z"}
+{"level":"info","message":"[mb:2525] POST /imposters","timestamp":"2026-04-06T16:33:43.159Z"}
+{"level":"info","message":"[http:3000] Open for business...","timestamp":"2026-04-06T16:33:43.169Z"}
+{"level":"info","message":"[mb:2525] GET /images/book.jpg","timestamp":"2026-04-06T16:34:04.875Z"}
+{"level":"info","message":"[mb:2525] GET /images/book.jpg","timestamp":"2026-04-06T16:34:09.661Z"}
+{"level":"info","message":"[mb:2525] GET /images/book.jpg","timestamp":"2026-04-06T16:34:11.545Z"}
+{"level":"info","message":"[http:3000] ::1:52820 => GET /Luiz-Pereira","timestamp":"2026-04-06T16:36:46.554Z"}
+{"level":"info","message":"[http:3000] no predicate match, using default response","timestamp":"2026-04-06T16:36:46.556Z"}
+{"level":"info","message":"[mb:2525] DELETE /imposters/3000","timestamp":"2026-04-06T16:37:23.616Z"}
+{"level":"info","message":"[http:3000] Ciao for now","timestamp":"2026-04-06T16:37:23.618Z"}
+{"level":"info","message":"[mb:2525] POST /imposters","timestamp":"2026-04-06T16:37:33.159Z"}
+{"level":"info","message":"[http:3000] Open for business...","timestamp":"2026-04-06T16:37:33.162Z"}
+{"level":"info","message":"[http:3000] ::1:61541 => GET /luiz-pereira","timestamp":"2026-04-06T16:37:49.299Z"}
+{"level":"info","message":"[http:3000] no predicate match, using default response","timestamp":"2026-04-06T16:37:49.300Z"}
+{"level":"info","message":"[mb:2525] GET /imposters/3000","timestamp":"2026-04-06T16:38:14.594Z"}
+{"level":"info","message":"[mb:2525] DELETE /imposters/3000","timestamp":"2026-04-06T16:40:12.114Z"}
+{"level":"info","message":"[http:3000] Ciao for now","timestamp":"2026-04-06T16:40:12.116Z"}
+{"level":"info","message":"[mb:2525] POST /imposters","timestamp":"2026-04-06T16:40:20.532Z"}
+{"level":"info","message":"[http:3000] Open for business...","timestamp":"2026-04-06T16:40:20.535Z"}
+{"level":"info","message":"[http:3000] ::1:49764 => GET /api/marcas","timestamp":"2026-04-06T16:40:28.218Z"}
+{"level":"info","message":"[http:3000] ::1:49766 => GET /api/outro","timestamp":"2026-04-06T16:40:37.516Z"}
+{"level":"info","message":"[http:3000] no predicate match, using default response","timestamp":"2026-04-06T16:40:37.517Z"}
+{"level":"info","message":"[mb:2525] DELETE /imposters/3000","timestamp":"2026-04-06T16:42:29.628Z"}
+{"level":"info","message":"[http:3000] Ciao for now","timestamp":"2026-04-06T16:42:29.629Z"}
+{"level":"info","message":"[mb:2525] POST /imposters","timestamp":"2026-04-06T16:42:35.705Z"}
+{"level":"info","message":"[http:3000] Open for business...","timestamp":"2026-04-06T16:42:35.709Z"}
+{"level":"info","message":"[http:3000] ::1:49714 => GET /api/cars?brand=Toyota","timestamp":"2026-04-06T16:42:42.431Z"}
+{"level":"info","message":"[http:3000] ::1:49715 => GET /api/cars","timestamp":"2026-04-06T16:42:48.786Z"}
+{"level":"info","message":"[http:3000] no predicate match, using default response","timestamp":"2026-04-06T16:42:48.787Z"}
+{"level":"info","message":"[mb:2525] DELETE /imposters/3000","timestamp":"2026-04-06T16:59:00.954Z"}
+{"level":"info","message":"[http:3000] Ciao for now","timestamp":"2026-04-06T16:59:00.957Z"}
+{"level":"info","message":"[mb:2525] POST /imposters","timestamp":"2026-04-06T16:59:06.078Z"}
+{"level":"info","message":"[http:3000] Open for business...","timestamp":"2026-04-06T16:59:06.079Z"}
+{"level":"info","message":"[http:3000] ::1:63532 => GET /api/cars?brand=Toyota","timestamp":"2026-04-06T16:59:12.590Z"}
+{"level":"info","message":"[http:3000] ::1:52192 => GET /api/cars","timestamp":"2026-04-06T16:59:21.663Z"}
+{"level":"info","message":"[mb:2525] DELETE /imposters/3000","timestamp":"2026-04-06T17:01:11.149Z"}
+{"level":"info","message":"[http:3000] Ciao for now","timestamp":"2026-04-06T17:01:11.151Z"}
+{"level":"info","message":"[mb:2525] POST /imposters","timestamp":"2026-04-06T17:01:14.807Z"}
+{"level":"info","message":"[http:3000] Open for business...","timestamp":"2026-04-06T17:01:14.811Z"}
+{"level":"info","message":"[http:3000] ::1:59068 => POST /api/login","timestamp":"2026-04-06T17:01:20.311Z"}
+{"level":"info","message":"[http:3000] ::1:59069 => POST /api/login","timestamp":"2026-04-06T17:01:25.565Z"}
+{"level":"info","message":"[http:3000] no predicate match, using default response","timestamp":"2026-04-06T17:01:25.566Z"}
+{"level":"info","message":"[mb:2525] DELETE /imposters/3000","timestamp":"2026-04-06T17:03:54.165Z"}
+{"level":"info","message":"[http:3000] Ciao for now","timestamp":"2026-04-06T17:03:54.166Z"}
+{"level":"info","message":"[mb:2525] POST /imposters","timestamp":"2026-04-06T17:03:57.871Z"}
+{"level":"info","message":"[http:3000] Open for business...","timestamp":"2026-04-06T17:03:57.874Z"}
+{"level":"info","message":"[http:3000] ::1:62820 => POST /api/login","timestamp":"2026-04-06T17:04:01.448Z"}
+{"level":"info","message":"[http:3000] ::1:62821 => POST /api/login","timestamp":"2026-04-06T17:04:05.339Z"}
+{"level":"info","message":"[mb:2525] DELETE /imposters/3000","timestamp":"2026-04-06T17:05:22.087Z"}
+{"level":"info","message":"[http:3000] Ciao for now","timestamp":"2026-04-06T17:05:22.089Z"}
+{"level":"info","message":"[mb:2525] POST /imposters","timestamp":"2026-04-06T17:05:26.349Z"}
+{"level":"info","message":"[http:3000] Open for business...","timestamp":"2026-04-06T17:05:26.353Z"}
+{"level":"info","message":"[http:3000] ::1:58259 => POST /api/users","timestamp":"2026-04-06T17:05:29.445Z"}
+{"level":"info","message":"[http:3000] ::1:58263 => POST /api/users","timestamp":"2026-04-06T17:05:34.566Z"}
+{"level":"info","message":"[http:3000] no predicate match, using default response","timestamp":"2026-04-06T17:05:34.567Z"}
+{"level":"info","message":"[mb:2525] DELETE /imposters/3000","timestamp":"2026-04-06T17:07:48.733Z"}
+{"level":"info","message":"[http:3000] Ciao for now","timestamp":"2026-04-06T17:07:48.734Z"}
+{"level":"info","message":"[mb:2525] POST /imposters","timestamp":"2026-04-06T17:07:54.216Z"}
+{"level":"info","message":"[http:3000] Open for business...","timestamp":"2026-04-06T17:07:54.220Z"}
+{"level":"info","message":"[http:3000] ::1:53941 => POST /api/users","timestamp":"2026-04-06T17:07:58.500Z"}
+{"level":"info","message":"[http:3000] ::1:53942 => POST /api/users","timestamp":"2026-04-06T17:08:03.416Z"}
+{"level":"info","message":"[mb:2525] DELETE /imposters/3000","timestamp":"2026-04-06T17:10:58.759Z"}
+{"level":"info","message":"[http:3000] Ciao for now","timestamp":"2026-04-06T17:10:58.760Z"}
+{"level":"info","message":"[mb:2525] POST /imposters","timestamp":"2026-04-06T17:11:02.935Z"}
+{"level":"info","message":"[http:3000] Open for business...","timestamp":"2026-04-06T17:11:02.941Z"}
+{"level":"info","message":"[http:3000] ::1:53264 => POST /api/temperature","timestamp":"2026-04-06T17:11:06.500Z"}
+{"level":"info","message":"[http:3000] ::1:53265 => POST /api/temperature","timestamp":"2026-04-06T17:11:13.404Z"}
+{"level":"info","message":"[http:3000] no predicate match, using default response","timestamp":"2026-04-06T17:11:13.405Z"}
+{"level":"info","message":"[mb:2525] DELETE /imposters/3000","timestamp":"2026-04-06T17:13:45.138Z"}
+{"level":"info","message":"[http:3000] Ciao for now","timestamp":"2026-04-06T17:13:45.140Z"}
+{"level":"info","message":"[mb:2525] POST /imposters","timestamp":"2026-04-06T17:13:48.742Z"}
+{"level":"info","message":"[http:3000] Open for business...","timestamp":"2026-04-06T17:13:48.751Z"}
+{"level":"info","message":"[http:3000] ::1:50343 => POST /api/temperature","timestamp":"2026-04-06T17:13:52.419Z"}
+{"level":"info","message":"[http:3000] ::1:50344 => POST /api/temperature","timestamp":"2026-04-06T17:13:55.393Z"}
+{"level":"info","message":"[http:3000] ::1:64613 => POST /api/temperature","timestamp":"2026-04-06T17:14:01.720Z"}
+{"level":"info","message":"[mb:2525] DELETE /imposters/3000","timestamp":"2026-04-06T17:15:36.932Z"}
+{"level":"info","message":"[http:3000] Ciao for now","timestamp":"2026-04-06T17:15:36.935Z"}
+{"level":"info","message":"[mb:2525] POST /imposters","timestamp":"2026-04-06T17:15:42.687Z"}
+{"level":"info","message":"[http:3000] Open for business...","timestamp":"2026-04-06T17:15:42.692Z"}
+{"level":"info","message":"[http:3000] ::1:52438 => POST /api/tasks","timestamp":"2026-04-06T17:15:46.888Z"}
+{"level":"info","message":"[http:3000] ::1:52440 => POST /api/tasks","timestamp":"2026-04-06T17:15:50.383Z"}
+{"level":"info","message":"[http:3000] no predicate match, using default response","timestamp":"2026-04-06T17:15:50.384Z"}
+{"level":"info","message":"[mb:2525] DELETE /imposters/3000","timestamp":"2026-04-06T17:21:01.396Z"}
+{"level":"info","message":"[http:3000] Ciao for now","timestamp":"2026-04-06T17:21:01.397Z"}
+{"level":"info","message":"[mb:2525] POST /imposters","timestamp":"2026-04-06T17:21:06.001Z"}
+{"level":"info","message":"[http:3000] Open for business...","timestamp":"2026-04-06T17:21:06.008Z"}
+{"level":"info","message":"[http:3000] ::1:61802 => POST /api/tasks","timestamp":"2026-04-06T17:21:09.501Z"}
+{"level":"info","message":"[http:3000] ::1:61803 => POST /api/tasks","timestamp":"2026-04-06T17:21:14.208Z"}
+{"level":"info","message":"[mb:2525] DELETE /imposters/3000","timestamp":"2026-04-06T17:23:24.838Z"}
+{"level":"info","message":"[http:3000] Ciao for now","timestamp":"2026-04-06T17:23:24.841Z"}
+{"level":"info","message":"[mb:2525] POST /imposters","timestamp":"2026-04-06T17:23:29.633Z"}
+{"level":"info","message":"[http:3000] Open for business...","timestamp":"2026-04-06T17:23:29.639Z"}
+{"level":"info","message":"[http:3000] ::1:61203 => POST /api/auth","timestamp":"2026-04-06T17:23:33.669Z"}
+{"level":"info","message":"[http:3000] ::1:61205 => POST /api/auth","timestamp":"2026-04-06T17:23:40.305Z"}
+{"level":"info","message":"[mb:2525] DELETE /imposters/3000","timestamp":"2026-04-06T17:25:27.732Z"}
+{"level":"info","message":"[http:3000] Ciao for now","timestamp":"2026-04-06T17:25:27.733Z"}
+{"level":"info","message":"[mb:2525] POST /imposters","timestamp":"2026-04-06T17:25:36.157Z"}
+{"level":"info","message":"[http:3000] Open for business...","timestamp":"2026-04-06T17:25:36.161Z"}
+{"level":"info","message":"[http:3000] ::1:56689 => GET /api/profile","timestamp":"2026-04-06T17:25:39.359Z"}
+{"level":"info","message":"[http:3000] ::1:62576 => GET /api/profile","timestamp":"2026-04-06T17:25:43.442Z"}
+{"level":"info","message":"[mb:2525] DELETE /imposters/3000","timestamp":"2026-04-06T17:28:15.085Z"}
+{"level":"info","message":"[http:3000] Ciao for now","timestamp":"2026-04-06T17:28:15.086Z"}
+{"level":"info","message":"[mb:2525] POST /imposters","timestamp":"2026-04-06T17:28:44.938Z"}
+{"level":"info","message":"[http:3000] Open for business...","timestamp":"2026-04-06T17:28:44.943Z"}
+{"level":"info","message":"[http:3000] ::1:50605 => POST /api/login","timestamp":"2026-04-06T17:28:49.811Z"}
+{"level":"info","message":"[http:3000] ::1:50606 => POST /api/login","timestamp":"2026-04-06T17:28:53.701Z"}
+{"level":"info","message":"[http:3000] ::1:50610 => POST /api/login","timestamp":"2026-04-06T17:28:58.238Z"}
+{"level":"info","message":"[mb:2525] DELETE /imposters/3000","timestamp":"2026-04-06T17:32:43.042Z"}
+{"level":"info","message":"[http:3000] Ciao for now","timestamp":"2026-04-06T17:32:43.043Z"}
+{"level":"info","message":"[mb:2525] POST /imposters","timestamp":"2026-04-06T17:32:47.252Z"}
+{"level":"info","message":"[http:3000] Open for business...","timestamp":"2026-04-06T17:32:47.257Z"}
+{"level":"info","message":"[http:3000] ::1:63710 => GET /api/naoexiste","timestamp":"2026-04-06T17:32:51.141Z"}
+{"level":"info","message":"[http:3000] ::1:63711 => GET /api/marcas","timestamp":"2026-04-06T17:32:55.369Z"}
+{"level":"info","message":"[http:3000] ::1:63712 => GET /api/marcas","timestamp":"2026-04-06T17:33:01.675Z"}
+{"level":"info","message":"[http:3000] ::1:63714 => GET /api/cars","timestamp":"2026-04-06T17:33:05.458Z"}
+{"level":"info","message":"[mb:2525] DELETE /imposters/3000","timestamp":"2026-04-06T17:38:57.701Z"}
+{"level":"info","message":"[http:3000] Ciao for now","timestamp":"2026-04-06T17:38:57.702Z"}
+{"level":"info","message":"[mb:2525] POST /imposters","timestamp":"2026-04-06T17:39:01.629Z"}
+{"level":"info","message":"[http:3000] Open for business...","timestamp":"2026-04-06T17:39:01.634Z"}
+{"level":"info","message":"[http:3000] ::1:59934 => GET /api/marcas","timestamp":"2026-04-06T17:39:05.181Z"}
+{"level":"info","message":"[http:3000] ::1:59936 => GET /api/naoexiste","timestamp":"2026-04-06T17:39:09.259Z"}
