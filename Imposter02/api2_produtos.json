@@ -1,0 +1,249 @@
+{
+  "port": 3002,
+  "protocol": "http",
+  "stubs": [
+    {
+      "predicates": [
+        {
+          "equals": {
+            "method": "GET",
+            "path": "/api/produtos"
+          }
+        }
+      ],
+      "responses": [
+        {
+          "is": {
+            "statusCode": 200,
+            "headers": { "Content-Type": "application/json" },
+            "body": {
+              "produtos": [
+                { "id": 1, "nome": "Teclado", "preco": 29.99, "quantidade": 50 },
+                { "id": 2, "nome": "Rato", "preco": 15.99, "quantidade": 0 }
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "predicates": [
+        {
+          "equals": {
+            "method": "GET",
+            "path": "/api/produtos/1"
+          }
+        }
+      ],
+      "responses": [
+        {
+          "is": {
+            "statusCode": 200,
+            "headers": { "Content-Type": "application/json" },
+            "body": { "id": 1, "nome": "Teclado", "preco": 29.99, "quantidade": 50 }
+          }
+        }
+      ]
+    },
+    {
+      "predicates": [
+        {
+          "equals": {
+            "method": "GET",
+            "path": "/api/produtos/2"
+          }
+        }
+      ],
+      "responses": [
+        {
+          "is": {
+            "statusCode": 200,
+            "headers": { "Content-Type": "application/json" },
+            "body": { "id": 2, "nome": "Rato", "preco": 15.99, "quantidade": 0 }
+          }
+        }
+      ]
+    },
+    {
+      "predicates": [
+        {
+          "equals": { "method": "GET" }
+        },
+        {
+          "startsWith": { "path": "/api/produtos/" }
+        }
+      ],
+      "responses": [
+        {
+          "is": {
+            "statusCode": 404,
+            "headers": { "Content-Type": "application/json" },
+            "body": { "error": "not_found", "message": "Produto nao encontrado." }
+          }
+        }
+      ]
+    },
+    {
+      "predicates": [
+        {
+          "equals": {
+            "method": "POST",
+            "path": "/api/produtos",
+            "headers": { "Content-Type": "application/json" }
+          }
+        },
+        {
+          "contains": { "body": "\"quantidade\":-" }
+        }
+      ],
+      "responses": [
+        {
+          "is": {
+            "statusCode": 400,
+            "headers": { "Content-Type": "application/json" },
+            "body": { "error": "invalid_quantity", "message": "Valor invalido. A quantidade nao pode ser negativa." }
+          }
+        }
+      ]
+    },
+    {
+      "predicates": [
+        {
+          "equals": {
+            "method": "POST",
+            "path": "/api/produtos",
+            "headers": { "Content-Type": "application/json" }
+          }
+        }
+      ],
+      "responses": [
+        {
+          "is": {
+            "statusCode": 201,
+            "headers": {
+              "Content-Type": "application/json",
+              "Location": "/api/produtos/3"
+            },
+            "body": { "id": 3, "status": "created", "message": "Produto criado com sucesso." }
+          }
+        }
+      ]
+    },
+    {
+      "predicates": [
+        {
+          "equals": {
+            "method": "PUT",
+            "path": "/api/produtos/1/stock",
+            "headers": { "Content-Type": "application/json" }
+          }
+        }
+      ],
+      "responses": [
+        {
+          "is": {
+            "statusCode": 200,
+            "headers": { "Content-Type": "application/json" },
+            "body": { "id": 1, "status": "updated", "message": "Stock atualizado com sucesso." }
+          }
+        }
+      ]
+    },
+    {
+      "predicates": [
+        {
+          "equals": {
+            "method": "PUT",
+            "path": "/api/produtos/2/stock",
+            "headers": { "Content-Type": "application/json" }
+          }
+        }
+      ],
+      "responses": [
+        {
+          "is": {
+            "statusCode": 200,
+            "headers": { "Content-Type": "application/json" },
+            "body": { "id": 2, "status": "updated", "message": "Stock atualizado com sucesso." }
+          }
+        }
+      ]
+    },
+    {
+      "predicates": [
+        {
+          "equals": { "method": "PUT" }
+        },
+        {
+          "startsWith": { "path": "/api/produtos/" }
+        }
+      ],
+      "responses": [
+        {
+          "is": {
+            "statusCode": 404,
+            "headers": { "Content-Type": "application/json" },
+            "body": { "error": "not_found", "message": "Produto nao encontrado." }
+          }
+        }
+      ]
+    },
+    {
+      "predicates": [
+        {
+          "equals": {
+            "method": "DELETE",
+            "path": "/api/produtos/2"
+          }
+        }
+      ],
+      "responses": [
+        {
+          "is": {
+            "statusCode": 200,
+            "headers": { "Content-Type": "application/json" },
+            "body": { "status": "deleted", "message": "Produto removido com sucesso." }
+          }
+        }
+      ]
+    },
+    {
+      "predicates": [
+        {
+          "equals": {
+            "method": "DELETE",
+            "path": "/api/produtos/1"
+          }
+        }
+      ],
+      "responses": [
+        {
+          "is": {
+            "statusCode": 400,
+            "headers": { "Content-Type": "application/json" },
+            "body": { "error": "stock_not_zero", "message": "Nao e possivel remover produto com stock disponivel." }
+          }
+        }
+      ]
+    },
+    {
+      "predicates": [
+        {
+          "equals": { "method": "DELETE" }
+        },
+        {
+          "startsWith": { "path": "/api/produtos/" }
+        }
+      ],
+      "responses": [
+        {
+          "is": {
+            "statusCode": 404,
+            "headers": { "Content-Type": "application/json" },
+            "body": { "error": "not_found", "message": "Produto nao encontrado." }
+          }
+        }
+      ]
+    }
+  ]
+}

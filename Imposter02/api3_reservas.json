@@ -1,0 +1,235 @@
+{
+  "port": 3003,
+  "protocol": "http",
+  "stubs": [
+    {
+      "predicates": [
+        {
+          "equals": {
+            "method": "GET",
+            "path": "/api/reservas"
+          }
+        }
+      ],
+      "responses": [
+        {
+          "is": {
+            "statusCode": 200,
+            "headers": { "Content-Type": "application/json" },
+            "body": {
+              "reservas": [
+                { "id": 1, "cliente": "Ana Silva", "checkin": "2026-05-01", "checkout": "2026-05-05", "tipo_quarto": "duplo" },
+                { "id": 2, "cliente": "Joao Santos", "checkin": "2026-06-10", "checkout": "2026-06-15", "tipo_quarto": "suite" }
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "predicates": [
+        {
+          "equals": {
+            "method": "POST",
+            "path": "/api/reservas",
+            "headers": { "Content-Type": "application/json" }
+          }
+        },
+        {
+          "contains": { "body": "\"checkout\":\"2026-04-01\"" }
+        }
+      ],
+      "responses": [
+        {
+          "is": {
+            "statusCode": 400,
+            "headers": { "Content-Type": "application/json" },
+            "body": {
+              "error": "invalid_dates",
+              "message": "A data de checkout nao pode ser anterior ao checkin."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "predicates": [
+        {
+          "equals": {
+            "method": "POST",
+            "path": "/api/reservas",
+            "headers": { "Content-Type": "application/json" }
+          }
+        },
+        {
+          "contains": { "body": "\"tipo_quarto\":\"suite\"" }
+        }
+      ],
+      "responses": [
+        {
+          "is": {
+            "statusCode": 409,
+            "headers": { "Content-Type": "application/json" },
+            "body": {
+              "error": "no_availability",
+              "message": "Sem disponibilidade para o tipo de quarto solicitado."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "predicates": [
+        {
+          "equals": {
+            "method": "POST",
+            "path": "/api/reservas",
+            "headers": { "Content-Type": "application/json" }
+          }
+        }
+      ],
+      "responses": [
+        {
+          "is": {
+            "statusCode": 201,
+            "headers": {
+              "Content-Type": "application/json",
+              "Location": "/api/reservas/3"
+            },
+            "body": {
+              "id": 3,
+              "status": "created",
+              "message": "Reserva criada com sucesso."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "predicates": [
+        {
+          "equals": {
+            "method": "PUT",
+            "path": "/api/reservas/1",
+            "headers": { "Content-Type": "application/json" }
+          }
+        }
+      ],
+      "responses": [
+        {
+          "is": {
+            "statusCode": 200,
+            "headers": { "Content-Type": "application/json" },
+            "body": {
+              "id": 1,
+              "status": "updated",
+              "message": "Reserva atualizada com sucesso."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "predicates": [
+        {
+          "equals": {
+            "method": "PUT",
+            "path": "/api/reservas/2",
+            "headers": { "Content-Type": "application/json" }
+          }
+        }
+      ],
+      "responses": [
+        {
+          "is": {
+            "statusCode": 400,
+            "headers": { "Content-Type": "application/json" },
+            "body": {
+              "error": "too_late_to_modify",
+              "message": "Nao e possivel alterar a reserva. O checkin e em menos de 24h."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "predicates": [
+        {
+          "equals": { "method": "PUT" }
+        },
+        {
+          "startsWith": { "path": "/api/reservas/" }
+        }
+      ],
+      "responses": [
+        {
+          "is": {
+            "statusCode": 404,
+            "headers": { "Content-Type": "application/json" },
+            "body": { "error": "not_found", "message": "Reserva nao encontrada." }
+          }
+        }
+      ]
+    },
+    {
+      "predicates": [
+        {
+          "equals": {
+            "method": "DELETE",
+            "path": "/api/reservas/1"
+          }
+        }
+      ],
+      "responses": [
+        {
+          "is": {
+            "statusCode": 200,
+            "headers": { "Content-Type": "application/json" },
+            "body": { "status": "deleted", "message": "Reserva cancelada com sucesso." }
+          }
+        }
+      ]
+    },
+    {
+      "predicates": [
+        {
+          "equals": {
+            "method": "DELETE",
+            "path": "/api/reservas/2"
+          }
+        }
+      ],
+      "responses": [
+        {
+          "is": {
+            "statusCode": 400,
+            "headers": { "Content-Type": "application/json" },
+            "body": {
+              "error": "checkin_already_done",
+              "message": "Nao e possivel cancelar. O checkin ja foi efetuado."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "predicates": [
+        {
+          "equals": { "method": "DELETE" }
+        },
+        {
+          "startsWith": { "path": "/api/reservas/" }
+        }
+      ],
+      "responses": [
+        {
+          "is": {
+            "statusCode": 404,
+            "headers": { "Content-Type": "application/json" },
+            "body": { "error": "not_found", "message": "Reserva nao encontrada." }
+          }
+        }
+      ]
+    }
+  ]
+}

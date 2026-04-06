@@ -1,0 +1,262 @@
+{
+  "port": 3005,
+  "protocol": "http",
+  "stubs": [
+    {
+      "predicates": [
+        {
+          "equals": {
+            "method": "GET",
+            "path": "/api/funcionarios"
+          }
+        }
+      ],
+      "responses": [
+        {
+          "is": {
+            "statusCode": 200,
+            "headers": { "Content-Type": "application/json" },
+            "body": {
+              "funcionarios": [
+                { "id": 1, "nome": "Ana Silva", "cargo": "Desenvolvedor", "salario": 1500 },
+                { "id": 2, "nome": "Joao Santos", "cargo": "Designer", "salario": 1200 }
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "predicates": [
+        {
+          "equals": {
+            "method": "POST",
+            "path": "/api/funcionarios",
+            "headers": { "Content-Type": "application/json" }
+          }
+        },
+        {
+          "contains": { "body": "\"salario\":5" }
+        }
+      ],
+      "responses": [
+        {
+          "is": {
+            "statusCode": 400,
+            "headers": { "Content-Type": "application/json" },
+            "body": {
+              "error": "salary_too_low",
+              "message": "Salario inferior ao minimo de 760 euros."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "predicates": [
+        {
+          "equals": {
+            "method": "POST",
+            "path": "/api/funcionarios",
+            "headers": { "Content-Type": "application/json" }
+          }
+        },
+        {
+          "contains": { "body": "\"salario\":7" }
+        }
+      ],
+      "responses": [
+        {
+          "is": {
+            "statusCode": 400,
+            "headers": { "Content-Type": "application/json" },
+            "body": {
+              "error": "salary_too_low",
+              "message": "Salario inferior ao minimo de 760 euros."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "predicates": [
+        {
+          "equals": {
+            "method": "POST",
+            "path": "/api/funcionarios",
+            "headers": { "Content-Type": "application/json" }
+          }
+        }
+      ],
+      "responses": [
+        {
+          "is": {
+            "statusCode": 201,
+            "headers": {
+              "Content-Type": "application/json",
+              "Location": "/api/funcionarios/3"
+            },
+            "body": {
+              "id": 3,
+              "status": "created",
+              "message": "Funcionario criado com sucesso."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "predicates": [
+        {
+          "equals": {
+            "method": "PUT",
+            "path": "/api/funcionarios/1/salario",
+            "headers": { "Content-Type": "application/json" }
+          }
+        },
+        {
+          "contains": { "body": "\"salario\":5" }
+        }
+      ],
+      "responses": [
+        {
+          "is": {
+            "statusCode": 400,
+            "headers": { "Content-Type": "application/json" },
+            "body": {
+              "error": "salary_too_low",
+              "message": "Salario nao pode ser inferior ao minimo de 760 euros."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "predicates": [
+        {
+          "equals": {
+            "method": "PUT",
+            "path": "/api/funcionarios/1/salario",
+            "headers": { "Content-Type": "application/json" }
+          }
+        }
+      ],
+      "responses": [
+        {
+          "is": {
+            "statusCode": 200,
+            "headers": { "Content-Type": "application/json" },
+            "body": {
+              "id": 1,
+              "status": "updated",
+              "message": "Salario atualizado com sucesso."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "predicates": [
+        {
+          "equals": {
+            "method": "PUT",
+            "path": "/api/funcionarios/2/salario",
+            "headers": { "Content-Type": "application/json" }
+          }
+        }
+      ],
+      "responses": [
+        {
+          "is": {
+            "statusCode": 200,
+            "headers": { "Content-Type": "application/json" },
+            "body": {
+              "id": 2,
+              "status": "updated",
+              "message": "Salario atualizado com sucesso."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "predicates": [
+        {
+          "equals": { "method": "PUT" }
+        },
+        {
+          "startsWith": { "path": "/api/funcionarios/" }
+        }
+      ],
+      "responses": [
+        {
+          "is": {
+            "statusCode": 404,
+            "headers": { "Content-Type": "application/json" },
+            "body": { "error": "not_found", "message": "Funcionario nao encontrado." }
+          }
+        }
+      ]
+    },
+    {
+      "predicates": [
+        {
+          "equals": {
+            "method": "DELETE",
+            "path": "/api/funcionarios/1"
+          }
+        }
+      ],
+      "responses": [
+        {
+          "is": {
+            "statusCode": 400,
+            "headers": { "Content-Type": "application/json" },
+            "body": {
+              "error": "has_pending_tasks",
+              "message": "Nao e possivel remover. O funcionario tem tarefas pendentes."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "predicates": [
+        {
+          "equals": {
+            "method": "DELETE",
+            "path": "/api/funcionarios/2"
+          }
+        }
+      ],
+      "responses": [
+        {
+          "is": {
+            "statusCode": 200,
+            "headers": { "Content-Type": "application/json" },
+            "body": { "status": "deleted", "message": "Funcionario removido com sucesso." }
+          }
+        }
+      ]
+    },
+    {
+      "predicates": [
+        {
+          "equals": { "method": "DELETE" }
+        },
+        {
+          "startsWith": { "path": "/api/funcionarios/" }
+        }
+      ],
+      "responses": [
+        {
+          "is": {
+            "statusCode": 404,
+            "headers": { "Content-Type": "application/json" },
+            "body": { "error": "not_found", "message": "Funcionario nao encontrado." }
+          }
+        }
+      ]
+    }
+  ]
+}

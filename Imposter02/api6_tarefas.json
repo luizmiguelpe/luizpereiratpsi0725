@@ -1,0 +1,249 @@
+{
+  "port": 3006,
+  "protocol": "http",
+  "stubs": [
+    {
+      "predicates": [
+        {
+          "equals": {
+            "method": "GET",
+            "path": "/api/tarefas"
+          }
+        }
+      ],
+      "responses": [
+        {
+          "is": {
+            "statusCode": 200,
+            "headers": { "Content-Type": "application/json" },
+            "body": {
+              "tarefas": [
+                { "id": 1, "titulo": "Comprar leite", "descricao": "Ir ao supermercado", "estado": "pendente" },
+                { "id": 2, "titulo": "Estudar Mountebank", "descricao": "Praticar imposters", "estado": "concluida" }
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "predicates": [
+        {
+          "equals": {
+            "method": "GET",
+            "path": "/api/tarefas/1"
+          }
+        }
+      ],
+      "responses": [
+        {
+          "is": {
+            "statusCode": 200,
+            "headers": { "Content-Type": "application/json" },
+            "body": { "id": 1, "titulo": "Comprar leite", "descricao": "Ir ao supermercado", "estado": "pendente" }
+          }
+        }
+      ]
+    },
+    {
+      "predicates": [
+        {
+          "equals": {
+            "method": "GET",
+            "path": "/api/tarefas/2"
+          }
+        }
+      ],
+      "responses": [
+        {
+          "is": {
+            "statusCode": 200,
+            "headers": { "Content-Type": "application/json" },
+            "body": { "id": 2, "titulo": "Estudar Mountebank", "descricao": "Praticar imposters", "estado": "concluida" }
+          }
+        }
+      ]
+    },
+    {
+      "predicates": [
+        {
+          "equals": { "method": "GET" }
+        },
+        {
+          "startsWith": { "path": "/api/tarefas/" }
+        }
+      ],
+      "responses": [
+        {
+          "is": {
+            "statusCode": 404,
+            "headers": { "Content-Type": "application/json" },
+            "body": { "error": "not_found", "message": "Tarefa nao encontrada." }
+          }
+        }
+      ]
+    },
+    {
+      "predicates": [
+        {
+          "equals": {
+            "method": "POST",
+            "path": "/api/tarefas",
+            "headers": { "Content-Type": "application/json" }
+          }
+        },
+        {
+          "contains": { "body": "\"titulo\":\"\"" }
+        }
+      ],
+      "responses": [
+        {
+          "is": {
+            "statusCode": 400,
+            "headers": { "Content-Type": "application/json" },
+            "body": { "error": "empty_title", "message": "O titulo nao pode estar vazio." }
+          }
+        }
+      ]
+    },
+    {
+      "predicates": [
+        {
+          "equals": {
+            "method": "POST",
+            "path": "/api/tarefas",
+            "headers": { "Content-Type": "application/json" }
+          }
+        }
+      ],
+      "responses": [
+        {
+          "is": {
+            "statusCode": 201,
+            "headers": {
+              "Content-Type": "application/json",
+              "Location": "/api/tarefas/3"
+            },
+            "body": { "id": 3, "status": "created", "message": "Tarefa criada com sucesso." }
+          }
+        }
+      ]
+    },
+    {
+      "predicates": [
+        {
+          "equals": {
+            "method": "PUT",
+            "path": "/api/tarefas/1",
+            "headers": { "Content-Type": "application/json" }
+          }
+        }
+      ],
+      "responses": [
+        {
+          "is": {
+            "statusCode": 200,
+            "headers": { "Content-Type": "application/json" },
+            "body": { "id": 1, "status": "updated", "message": "Tarefa atualizada com sucesso." }
+          }
+        }
+      ]
+    },
+    {
+      "predicates": [
+        {
+          "equals": {
+            "method": "PUT",
+            "path": "/api/tarefas/2",
+            "headers": { "Content-Type": "application/json" }
+          }
+        }
+      ],
+      "responses": [
+        {
+          "is": {
+            "statusCode": 200,
+            "headers": { "Content-Type": "application/json" },
+            "body": { "id": 2, "status": "updated", "message": "Tarefa atualizada com sucesso." }
+          }
+        }
+      ]
+    },
+    {
+      "predicates": [
+        {
+          "equals": { "method": "PUT" }
+        },
+        {
+          "startsWith": { "path": "/api/tarefas/" }
+        }
+      ],
+      "responses": [
+        {
+          "is": {
+            "statusCode": 404,
+            "headers": { "Content-Type": "application/json" },
+            "body": { "error": "not_found", "message": "Tarefa nao encontrada." }
+          }
+        }
+      ]
+    },
+    {
+      "predicates": [
+        {
+          "equals": {
+            "method": "DELETE",
+            "path": "/api/tarefas/2"
+          }
+        }
+      ],
+      "responses": [
+        {
+          "is": {
+            "statusCode": 200,
+            "headers": { "Content-Type": "application/json" },
+            "body": { "status": "deleted", "message": "Tarefa eliminada com sucesso." }
+          }
+        }
+      ]
+    },
+    {
+      "predicates": [
+        {
+          "equals": {
+            "method": "DELETE",
+            "path": "/api/tarefas/1"
+          }
+        }
+      ],
+      "responses": [
+        {
+          "is": {
+            "statusCode": 400,
+            "headers": { "Content-Type": "application/json" },
+            "body": { "error": "task_not_completed", "message": "Nao e possivel eliminar. A tarefa ainda nao foi concluida." }
+          }
+        }
+      ]
+    },
+    {
+      "predicates": [
+        {
+          "equals": { "method": "DELETE" }
+        },
+        {
+          "startsWith": { "path": "/api/tarefas/" }
+        }
+      ],
+      "responses": [
+        {
+          "is": {
+            "statusCode": 404,
+            "headers": { "Content-Type": "application/json" },
+            "body": { "error": "not_found", "message": "Tarefa nao encontrada." }
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,113 @@
+{"level":"info","message":"[mb:2525] mountebank v2.9.1 now taking orders - point your browser to http://localhost:2525/ for help","timestamp":"2026-04-06T18:07:58.587Z"}
+{"level":"info","message":"[mb:2525] GET /images/book.jpg","timestamp":"2026-04-06T18:08:01.880Z"}
+{"level":"info","message":"[mb:2525] POST /imposters","timestamp":"2026-04-06T18:08:09.875Z"}
+{"level":"info","message":"[http:3001] Open for business...","timestamp":"2026-04-06T18:08:09.884Z"}
+{"level":"info","message":"[http:3001] ::1:64368 => GET /api/alunos","timestamp":"2026-04-06T18:08:48.091Z"}
+{"level":"info","message":"[mb:2525] DELETE /imposters/3001","timestamp":"2026-04-06T18:11:13.600Z"}
+{"level":"info","message":"[http:3001] Ciao for now","timestamp":"2026-04-06T18:11:13.602Z"}
+{"level":"info","message":"[mb:2525] POST /imposters","timestamp":"2026-04-06T18:11:17.982Z"}
+{"level":"info","message":"[http:3001] Open for business...","timestamp":"2026-04-06T18:11:17.985Z"}
+{"level":"info","message":"[http:3001] ::1:57087 => GET /api/alunos/1","timestamp":"2026-04-06T18:11:21.968Z"}
+{"level":"info","message":"[http:3001] ::1:57088 => GET /api/alunos/2","timestamp":"2026-04-06T18:11:30.919Z"}
+{"level":"info","message":"[http:3001] ::1:57089 => GET /api/alunos/99","timestamp":"2026-04-06T18:11:35.660Z"}
+{"level":"info","message":"[mb:2525] DELETE /imposters/3001","timestamp":"2026-04-06T18:13:02.613Z"}
+{"level":"info","message":"[http:3001] Ciao for now","timestamp":"2026-04-06T18:13:02.615Z"}
+{"level":"info","message":"[mb:2525] POST /imposters","timestamp":"2026-04-06T18:13:06.177Z"}
+{"level":"info","message":"[http:3001] Open for business...","timestamp":"2026-04-06T18:13:06.181Z"}
+{"level":"info","message":"[http:3001] ::1:54055 => POST /api/alunos","timestamp":"2026-04-06T18:13:11.672Z"}
+{"level":"info","message":"[http:3001] ::1:59559 => POST /api/alunos","timestamp":"2026-04-06T18:13:15.947Z"}
+{"level":"info","message":"[http:3001] ::1:59560 => POST /api/alunos","timestamp":"2026-04-06T18:13:19.024Z"}
+{"level":"info","message":"[mb:2525] DELETE /imposters/3001","timestamp":"2026-04-06T18:14:54.449Z"}
+{"level":"info","message":"[http:3001] Ciao for now","timestamp":"2026-04-06T18:14:54.451Z"}
+{"level":"info","message":"[mb:2525] POST /imposters","timestamp":"2026-04-06T18:14:57.519Z"}
+{"level":"info","message":"[http:3001] Open for business...","timestamp":"2026-04-06T18:14:57.521Z"}
+{"level":"info","message":"[http:3001] ::1:53355 => PUT /api/alunos/1","timestamp":"2026-04-06T18:15:01.297Z"}
+{"level":"info","message":"[http:3001] ::1:53356 => PUT /api/alunos/99","timestamp":"2026-04-06T18:15:05.252Z"}
+{"level":"info","message":"[mb:2525] DELETE /imposters/3001","timestamp":"2026-04-06T18:16:47.303Z"}
+{"level":"info","message":"[http:3001] Ciao for now","timestamp":"2026-04-06T18:16:47.305Z"}
+{"level":"info","message":"[mb:2525] POST /imposters","timestamp":"2026-04-06T18:16:50.867Z"}
+{"level":"info","message":"[http:3001] Open for business...","timestamp":"2026-04-06T18:16:50.871Z"}
+{"level":"info","message":"[http:3001] ::1:59901 => DELETE /api/alunos/1","timestamp":"2026-04-06T18:16:54.039Z"}
+{"level":"info","message":"[http:3001] ::1:61519 => DELETE /api/alunos/1","timestamp":"2026-04-06T18:16:59.282Z"}
+{"level":"info","message":"[mb:2525] POST /imposters","timestamp":"2026-04-06T18:20:06.035Z"}
+{"level":"info","message":"[http:3002] Open for business...","timestamp":"2026-04-06T18:20:06.038Z"}
+{"level":"info","message":"[http:3002] ::1:51182 => GET /api/produtos","timestamp":"2026-04-06T18:20:10.062Z"}
+{"level":"info","message":"[mb:2525] DELETE /imposters/3002","timestamp":"2026-04-06T18:22:36.037Z"}
+{"level":"info","message":"[http:3002] Ciao for now","timestamp":"2026-04-06T18:22:36.039Z"}
+{"level":"info","message":"[mb:2525] POST /imposters","timestamp":"2026-04-06T18:22:40.198Z"}
+{"level":"info","message":"[http:3002] Open for business...","timestamp":"2026-04-06T18:22:40.206Z"}
+{"level":"info","message":"[http:3002] ::1:49670 => GET /api/produtos","timestamp":"2026-04-06T18:22:45.176Z"}
+{"level":"info","message":"[http:3002] ::1:49671 => GET /api/produtos/1","timestamp":"2026-04-06T18:22:50.227Z"}
+{"level":"info","message":"[http:3002] ::1:57078 => GET /api/produtos/99","timestamp":"2026-04-06T18:22:54.369Z"}
+{"level":"info","message":"[http:3002] ::1:57079 => POST /api/produtos","timestamp":"2026-04-06T18:22:58.977Z"}
+{"level":"info","message":"[http:3002] ::1:57080 => POST /api/produtos","timestamp":"2026-04-06T18:23:03.282Z"}
+{"level":"info","message":"[http:3002] ::1:57081 => PUT /api/produtos/1/stock","timestamp":"2026-04-06T18:23:06.738Z"}
+{"level":"info","message":"[http:3002] ::1:57082 => PUT /api/produtos/99/stock","timestamp":"2026-04-06T18:23:11.840Z"}
+{"level":"info","message":"[http:3002] ::1:57083 => DELETE /api/produtos/2","timestamp":"2026-04-06T18:23:15.043Z"}
+{"level":"info","message":"[http:3002] ::1:57084 => DELETE /api/produtos/1","timestamp":"2026-04-06T18:23:19.536Z"}
+{"level":"info","message":"[http:3002] ::1:57085 => DELETE /api/produtos/99","timestamp":"2026-04-06T18:23:25.094Z"}
+{"level":"info","message":"[mb:2525] POST /imposters","timestamp":"2026-04-06T18:27:01.588Z"}
+{"level":"info","message":"[http:3003] Open for business...","timestamp":"2026-04-06T18:27:01.591Z"}
+{"level":"info","message":"[http:3003] ::1:51497 => GET /api/reservas","timestamp":"2026-04-06T18:27:05.392Z"}
+{"level":"info","message":"[http:3003] ::1:51498 => POST /api/reservas","timestamp":"2026-04-06T18:27:08.693Z"}
+{"level":"info","message":"[http:3003] ::1:51499 => POST /api/reservas","timestamp":"2026-04-06T18:27:13.283Z"}
+{"level":"info","message":"[http:3003] ::1:51500 => POST /api/reservas","timestamp":"2026-04-06T18:27:21.589Z"}
+{"level":"info","message":"[http:3003] ::1:51501 => PUT /api/reservas/1","timestamp":"2026-04-06T18:27:24.737Z"}
+{"level":"info","message":"[http:3003] ::1:51502 => PUT /api/reservas/2","timestamp":"2026-04-06T18:27:29.216Z"}
+{"level":"info","message":"[http:3003] ::1:60296 => PUT /api/reservas/99","timestamp":"2026-04-06T18:27:31.988Z"}
+{"level":"info","message":"[http:3003] ::1:60297 => DELETE /api/reservas/1","timestamp":"2026-04-06T18:27:35.685Z"}
+{"level":"info","message":"[http:3003] ::1:60298 => DELETE /api/reservas/2","timestamp":"2026-04-06T18:27:39.120Z"}
+{"level":"info","message":"[http:3003] ::1:60299 => DELETE /api/reservas/99","timestamp":"2026-04-06T18:27:43.668Z"}
+{"level":"info","message":"[mb:2525] POST /imposters","timestamp":"2026-04-06T18:29:18.561Z"}
+{"level":"info","message":"[http:3004] Open for business...","timestamp":"2026-04-06T18:29:18.566Z"}
+{"level":"info","message":"[http:3004] ::1:55636 => GET /api/livros","timestamp":"2026-04-06T18:29:22.512Z"}
+{"level":"info","message":"[http:3004] ::1:55637 => GET /api/livros/1","timestamp":"2026-04-06T18:29:25.744Z"}
+{"level":"info","message":"[http:3004] ::1:55638 => GET /api/livros/99","timestamp":"2026-04-06T18:29:29.163Z"}
+{"level":"info","message":"[http:3004] ::1:55639 => POST /api/emprestimos","timestamp":"2026-04-06T18:29:33.267Z"}
+{"level":"info","message":"[http:3004] ::1:55640 => PUT /api/emprestimos/1/devolucao","timestamp":"2026-04-06T18:29:36.606Z"}
+{"level":"info","message":"[http:3004] ::1:55641 => PUT /api/emprestimos/1/devolucao","timestamp":"2026-04-06T18:29:40.824Z"}
+{"level":"info","message":"[http:3004] ::1:55642 => PUT /api/emprestimos/99/devolucao","timestamp":"2026-04-06T18:29:46.342Z"}
+{"level":"info","message":"[http:3004] ::1:60605 => DELETE /api/livros/1","timestamp":"2026-04-06T18:29:50.389Z"}
+{"level":"info","message":"[http:3004] ::1:60606 => DELETE /api/livros/2","timestamp":"2026-04-06T18:29:55.400Z"}
+{"level":"info","message":"[http:3004] ::1:60607 => DELETE /api/livros/99","timestamp":"2026-04-06T18:29:59.379Z"}
+{"level":"info","message":"[mb:2525] POST /imposters","timestamp":"2026-04-06T19:06:45.812Z"}
+{"level":"info","message":"[http:3005] Open for business...","timestamp":"2026-04-06T19:06:45.817Z"}
+{"level":"info","message":"[mb:2525] POST /imposters","timestamp":"2026-04-06T19:06:56.142Z"}
+{"level":"error","message":"[mb:2525] error creating imposter: {\"code\":\"EADDRINUSE\",\"errno\":-4091,\"syscall\":\"listen\",\"address\":\"::\",\"port\":3005,\"message\":\"listen EADDRINUSE: address already in use :::3005\",\"name\":\"Error\",\"stack\":\"Error: listen EADDRINUSE: address already in use :::3005\\n    at Server.setupListenHandle [as _listen2] (node:net:1940:16)\\n    at listenInCluster (node:net:1997:12)\\n    at Server.listen (node:net:2102:7)\\n    at C:\\\\Users\\\\filip\\\\AppData\\\\Roaming\\\\npm\\\\node_modules\\\\mountebank\\\\src\\\\models\\\\http\\\\baseHttpServer.js:172:20\\n    at new Promise (<anonymous>)\\n    at create (C:\\\\Users\\\\filip\\\\AppData\\\\Roaming\\\\npm\\\\node_modules\\\\mountebank\\\\src\\\\models\\\\http\\\\baseHttpServer.js:158:16)\\n    at Object.createServer (C:\\\\Users\\\\filip\\\\AppData\\\\Roaming\\\\npm\\\\node_modules\\\\mountebank\\\\src\\\\models\\\\protocols.js:35:34)\\n    at C:\\\\Users\\\\filip\\\\AppData\\\\Roaming\\\\npm\\\\node_modules\\\\mountebank\\\\src\\\\models\\\\imposter.js:198:22\\n    at new Promise (<anonymous>)\\n    at Object.create (C:\\\\Users\\\\filip\\\\AppData\\\\Roaming\\\\npm\\\\node_modules\\\\mountebank\\\\src\\\\models\\\\imposter.js:192:12)\"}","timestamp":"2026-04-06T19:06:56.149Z"}
+{"level":"info","message":"[http:3005] ::1:63387 => GET /api/funcionarios","timestamp":"2026-04-06T19:07:00.470Z"}
+{"level":"info","message":"[http:3005] ::1:49761 => POST /api/funcionarios","timestamp":"2026-04-06T19:07:03.720Z"}
+{"level":"info","message":"[http:3005] ::1:49762 => POST /api/funcionarios","timestamp":"2026-04-06T19:07:07.622Z"}
+{"level":"info","message":"[http:3005] ::1:49763 => PUT /api/funcionarios/1/salario","timestamp":"2026-04-06T19:07:13.741Z"}
+{"level":"info","message":"[http:3005] ::1:63045 => PUT /api/funcionarios/1/salario","timestamp":"2026-04-06T19:07:18.975Z"}
+{"level":"info","message":"[http:3005] ::1:49759 => PUT /api/funcionarios/99/salario","timestamp":"2026-04-06T19:07:24.646Z"}
+{"level":"info","message":"[http:3005] ::1:49761 => DELETE /api/funcionarios/1","timestamp":"2026-04-06T19:07:27.885Z"}
+{"level":"info","message":"[http:3005] ::1:54583 => DELETE /api/funcionarios/2","timestamp":"2026-04-06T19:07:33.573Z"}
+{"level":"info","message":"[http:3005] ::1:54584 => DELETE /api/funcionarios/99","timestamp":"2026-04-06T19:07:37.925Z"}
+{"level":"info","message":"[mb:2525] POST /imposters","timestamp":"2026-04-06T19:11:25.643Z"}
+{"level":"info","message":"[http:3006] Open for business...","timestamp":"2026-04-06T19:11:25.647Z"}
+{"level":"info","message":"[http:3006] ::1:55344 => GET /api/tarefas","timestamp":"2026-04-06T19:11:30.183Z"}
+{"level":"info","message":"[http:3006] ::1:55346 => GET /api/tarefas/1","timestamp":"2026-04-06T19:11:34.197Z"}
+{"level":"info","message":"[http:3006] ::1:61831 => GET /api/tarefas/99","timestamp":"2026-04-06T19:11:40.187Z"}
+{"level":"info","message":"[http:3006] ::1:61833 => POST /api/tarefas","timestamp":"2026-04-06T19:11:43.396Z"}
+{"level":"info","message":"[http:3006] ::1:61836 => POST /api/tarefas","timestamp":"2026-04-06T19:11:48.051Z"}
+{"level":"info","message":"[http:3006] ::1:61837 => PUT /api/tarefas/1","timestamp":"2026-04-06T19:11:51.044Z"}
+{"level":"info","message":"[http:3006] ::1:61838 => PUT /api/tarefas/99","timestamp":"2026-04-06T19:11:55.748Z"}
+{"level":"info","message":"[http:3006] ::1:61839 => DELETE /api/tarefas/2","timestamp":"2026-04-06T19:11:59.603Z"}
+{"level":"info","message":"[http:3006] ::1:61840 => DELETE /api/tarefas/1","timestamp":"2026-04-06T19:12:03.027Z"}
+{"level":"info","message":"[http:3006] ::1:51140 => DELETE /api/tarefas/1","timestamp":"2026-04-06T19:12:07.340Z"}
+{"level":"info","message":"[http:3006] ::1:51141 => DELETE /api/tarefas/99","timestamp":"2026-04-06T19:12:11.122Z"}
+{"level":"info","message":"[mb:2525] POST /imposters","timestamp":"2026-04-06T19:13:58.407Z"}
+{"level":"info","message":"[http:3007] Open for business...","timestamp":"2026-04-06T19:13:58.412Z"}
+{"level":"info","message":"[http:3007] ::1:58619 => GET /api/clientes","timestamp":"2026-04-06T19:14:01.516Z"}
+{"level":"info","message":"[http:3007] ::1:58620 => POST /api/clientes","timestamp":"2026-04-06T19:14:04.576Z"}
+{"level":"info","message":"[http:3007] ::1:51849 => GET /api/clientes/1/pedidos","timestamp":"2026-04-06T19:14:09.637Z"}
+{"level":"info","message":"[http:3007] ::1:51850 => GET /api/clientes/99/pedidos","timestamp":"2026-04-06T19:14:13.718Z"}
+{"level":"info","message":"[http:3007] ::1:51851 => POST /api/pedidos","timestamp":"2026-04-06T19:14:17.009Z"}
+{"level":"info","message":"[http:3007] ::1:51852 => POST /api/pedidos","timestamp":"2026-04-06T19:14:21.555Z"}
+{"level":"info","message":"[http:3007] ::1:51853 => POST /api/pedidos","timestamp":"2026-04-06T19:14:25.043Z"}
+{"level":"info","message":"[http:3007] ::1:51854 => PUT /api/pedidos/1","timestamp":"2026-04-06T19:14:30.031Z"}
+{"level":"info","message":"[http:3007] ::1:51855 => PUT /api/pedidos/99","timestamp":"2026-04-06T19:14:33.894Z"}
+{"level":"info","message":"[http:3007] ::1:51856 => DELETE /api/pedidos/1","timestamp":"2026-04-06T19:14:39.170Z"}
+{"level":"info","message":"[http:3007] ::1:52426 => DELETE /api/pedidos/2","timestamp":"2026-04-06T19:14:43.052Z"}
+{"level":"info","message":"[http:3007] ::1:52427 => DELETE /api/pedidos/2","timestamp":"2026-04-06T19:14:55.305Z"}
+{"level":"info","message":"[http:3007] ::1:52428 => DELETE /api/pedidos/99","timestamp":"2026-04-06T19:15:00.280Z"}
